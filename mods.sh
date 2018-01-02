@@ -1,3 +1,7 @@
+if (( $EUID != 0 )); then
+    echo "Please run as root"
+    exit
+fi
 echo installing mods
 apt install -y curl
 apt install git 
